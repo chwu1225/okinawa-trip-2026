@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沖繩親子旅行攻略 2026</title>
+<style>
+  :root {
+    --primary: #0891b2;
+    --primary-dark: #0e7490;
+    --primary-light: #e0f2fe;
+    --accent: #f59e0b;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #1e293b;
+    --text-light: #64748b;
+    --border: #e2e8f0;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --radius: 12px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* Hero Banner */
+  .hero {
+    background: linear-gradient(135deg, #0891b2 0%, #0284c7 50%, #0ea5e9 100%);
+    color: white;
+    padding: 2.5rem 1.5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+  }
+  .hero h1 { font-size: 1.8rem; margin-bottom: 0.3rem; position: relative; }
+  .hero .subtitle { opacity: 0.9; font-size: 0.95rem; position: relative; }
+  .hero .trip-info {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .hero .trip-info span {
+    background: rgba(255,255,255,0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    backdrop-filter: blur(10px);
+  }
+
+  /* Tab Navigation */
+  .tab-nav {
+    display: flex;
+    overflow-x: auto;
+    background: var(--card);
+    border-bottom: 2px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .tab-nav::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    flex: 0 0 auto;
+    padding: 0.8rem 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .tab-btn:hover { color: var(--primary); background: var(--primary-light); }
+  .tab-btn.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+    font-weight: 600;
+  }
+
+  /* Content Area */
+  .content { max-width: 900px; margin: 0 auto; padding: 1rem; }
+  .tab-panel { display: none; animation: fadeIn 0.3s ease; }
+  .tab-panel.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Cards */
+  .card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    border: 1px solid var(--border);
+  }
+  .card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-light);
+    color: var(--primary-dark);
+  }
+  .card h3 {
+    font-size: 1.1rem;
+    margin: 1.2rem 0 0.6rem;
+    color: var(--text);
+  }
+  .card h4 {
+    font-size: 0.95rem;
+    margin: 1rem 0 0.4rem;
+    color: var(--primary-dark);
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8rem 0;
+    font-size: 0.9rem;
+  }
+  th, td {
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+  }
+  tr:hover { background: #f1f5f9; }
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--primary), var(--accent));
+    border-radius: 3px;
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 1.2rem;
+    padding: 0.8rem 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary);
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.85rem;
+    top: 1rem;
+    width: 12px;
+    height: 12px;
+    background: var(--primary);
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  .timeline-time {
+    font-weight: 700;
+    color: var(--primary-dark);
+    font-size: 0.9rem;
+  }
+  .timeline-desc { margin-top: 0.2rem; font-size: 0.9rem; }
+  .timeline-note {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 0.2rem;
+  }
+
+  /* Day Header */
+  .day-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius) var(--radius) 0 0;
+    margin: 1.5rem 0 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .day-header .day-icon { font-size: 1.8rem; }
+  .day-header .day-label { font-size: 1.1rem; font-weight: 700; }
+  .day-header .day-theme { font-size: 0.85rem; opacity: 0.9; }
+  .day-body {
+    background: var(--card);
+    padding: 1.5rem;
+    border-radius: 0 0 var(--radius) var(--radius);
+    border: 1px solid var(--border);
+    border-top: none;
+    margin-bottom: 1rem;
+  }
+
+  /* Info boxes */
+  .info-box {
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin: 0.8rem 0;
+    font-size: 0.9rem;
+  }
+  .info-box.tip { background: #ecfdf5; border-left: 4px solid var(--success); }
+  .info-box.warn { background: #fffbeb; border-left: 4px solid var(--warning); }
+  .info-box.danger { background: #fef2f2; border-left: 4px solid var(--danger); }
+  .info-box.info { background: var(--primary-light); border-left: 4px solid var(--primary); }
+
+  /* Budget bar */
+  .budget-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6rem;
+  }
+  .budget-label { width: 100px; font-size: 0.85rem; font-weight: 600; flex-shrink: 0; }
+  .budget-bar-wrap { flex: 1; height: 28px; background: #f1f5f9; border-radius: 14px; overflow: hidden; position: relative; }
+  .budget-bar {
+    height: 100%;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+    min-width: 60px;
+    transition: width 1s ease;
+  }
+
+  /* Lists */
+  ul.check-list { list-style: none; padding: 0; }
+  ul.check-list li {
+    padding: 0.4rem 0 0.4rem 1.5rem;
+    position: relative;
+    font-size: 0.9rem;
+  }
+  ul.check-list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: 700;
+  }
+
+  /* Phone cards */
+  .phone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.8rem;
+    margin: 1rem 0;
+  }
+  .phone-card {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border);
+  }
+  .phone-card .phone-label { font-size: 0.8rem; color: var(--text-light); }
+  .phone-card .phone-number { font-size: 1.05rem; font-weight: 700; color: var(--primary-dark); margin-top: 0.2rem; }
+
+  /* Spot Cards */
+  .spot-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .spot-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  .spot-card .spot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+  .spot-card .spot-name { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+  .spot-card .spot-badge {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+  }
+  .badge-free { background: #dcfce7; color: #166534; }
+  .badge-paid { background: #fef3c7; color: #92400e; }
+  .spot-card .spot-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+  .spot-card .spot-meta span { display: flex; align-items: center; gap: 0.2rem; }
+  .spot-card .spot-highlights {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .spot-card .spot-highlights li {
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+    list-style: none;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+  .spot-card .spot-highlights li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: 700;
+  }
+
+  /* Credit card highlight */
+  .cc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  .cc-card {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 2px solid var(--border);
+    text-align: center;
+  }
+  .cc-card .cc-name { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .cc-card .cc-rate { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+  .cc-card .cc-use { font-size: 0.8rem; color: var(--text-light); margin-top: 0.3rem; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-light);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.4rem; }
+    .cc-grid { grid-template-columns: 1fr; }
+    .card { padding: 1rem; }
+    .content { padding: 0.5rem; }
+    th, td { padding: 0.4rem 0.5rem; font-size: 0.82rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <h1>&#x1F3D6; 沖繩親子家族旅行攻略</h1>
+  <div class="subtitle">Okinawa Family Trip Guide 2026</div>
+  <div class="trip-info">
+    <span>&#x1F6F3; 4/24-4/29</span>
+    <span>&#x1F46A; 2大2小</span>
+    <span>&#x1F6A2; 郵輪去+&#x2708; 飛機回</span>
+    <span>&#x1F3E8; B/C HOTEL 4晚</span>
+    <span>&#x1F697; 含免費租車</span>
+  </div>
+</div>
+
+<!-- Tab Navigation -->
+<nav class="tab-nav" id="tabNav">
+  <button class="tab-btn active" data-tab="overview">總覽</button>
+  <button class="tab-btn" data-tab="stay">住宿租車</button>
+  <button class="tab-btn" data-tab="day1">Day1 抵達</button>
+  <button class="tab-btn" data-tab="day2">Day2 兒童王國</button>
+  <button class="tab-btn" data-tab="day3">Day3 水族館</button>
+  <button class="tab-btn" data-tab="day4">Day4 南部市區</button>
+  <button class="tab-btn" data-tab="day5">Day5 回家</button>
+  <button class="tab-btn" data-tab="budget">預算</button>
+  <button class="tab-btn" data-tab="info">實用資訊</button>
+</nav>
+
+<div class="content">
+
+<!-- ===== 總覽 ===== -->
+<div class="tab-panel active" id="overview">
+  <div class="card">
+    <h2>行程總覽</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><th>日期</th><th>星期</th><th>主題</th><th>交通</th><th>重點</th></tr>
+      <tr><td>4/24</td><td>五</td><td>&#x1F6A2; 出發日</td><td>郵輪</td><td>14:00 基隆港出發</td></tr>
+      <tr><td>4/25</td><td>六</td><td>&#x1F6F3; 抵達+入住</td><td style="color:var(--primary);font-weight:700">租車</td><td>13:00 抵那霸、取車、超市、入住、牧志市場晚餐</td></tr>
+      <tr><td>4/26</td><td>日</td><td>&#x1F3AA; 兒童王國日</td><td style="color:var(--primary);font-weight:700">租車</td><td>動物園+玩水+Wonder Museum、殘波岬、御菓子御殿</td></tr>
+      <tr><td>4/27</td><td>一</td><td>&#x1F42C; 水族館北部</td><td style="color:var(--primary);font-weight:700">租車</td><td>美麗海水族館、古宇利島、美國村、Blue Seal</td></tr>
+      <tr><td>4/28</td><td>二</td><td>&#x1F3DD; 南部+市區</td><td style="color:var(--primary);font-weight:700">租車</td><td>瀨長島、奧武島、平和祈念公園、首里城、國際通</td></tr>
+      <tr><td>4/29</td><td>三</td><td>&#x2708; 回家</td><td>租車→機場</td><td>漁市場早餐、13:00前退房、還車、飛機回台</td></tr>
+    </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>預算摘要（全家4人）</h2>
+    <div class="budget-item">
+      <span class="budget-label">郵輪</span>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:12%;background:linear-gradient(90deg,#6366f1,#818cf8)">NT$4,728</div></div>
+    </div>
+    <div class="budget-item">
+      <span class="budget-label">住宿4晚</span>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:27%;background:linear-gradient(90deg,#0891b2,#0ea5e9)">NT$10,609</div></div>
+    </div>
+    <div class="budget-item">
+      <span class="budget-label">回程機票</span>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:26%;background:linear-gradient(90deg,#8b5cf6,#a78bfa)">~NT$10,000</div></div>
+    </div>
+    <div class="budget-item">
+      <span class="budget-label">交通門票</span>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:10%;background:linear-gradient(90deg,#10b981,#34d399)">~NT$3,500</div></div>
+    </div>
+    <div class="budget-item">
+      <span class="budget-label">餐飲</span>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:15%;background:linear-gradient(90deg,#f59e0b,#fbbf24)">~NT$6,000</div></div>
+    </div>
+    <div class="budget-item">
+      <span class="budget-label">其他</span>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:10%;background:linear-gradient(90deg,#ec4899,#f472b6)">~NT$3,500</div></div>
+    </div>
+    <p style="text-align:right;font-size:1.1rem;font-weight:700;margin-top:0.8rem;color:var(--primary-dark)">
+      總計約 NT$38,000 - 40,000
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>重點提醒</h2>
+    <div class="info-box warn">&#x26A0; 盡快訂回程機票！4/29 接近黃金週，越晚越貴。</div>
+    <div class="info-box tip">&#x2705; B/C HOTEL NAHA 含免費租車，保險 &yen;550/24hr 另計。Check-out 延到 13:00！</div>
+    <div class="info-box info">&#x1F4B3; 信用卡策略：Booking.com 用凱基幣享卡(淨2%)、日本實體消費用樂天JCB(淨2.5%)</div>
+    <div class="info-box tip">&#x1F4A1; Day 2/3 已對調：週日去兒童王國（避開水族館週末人潮），週一去水族館。</div>
+  </div>
+</div>
+
+<!-- ===== 住宿租車 ===== -->
+<div class="tab-panel" id="stay">
+  <div class="card">
+    <h2>&#x1F3E8; B/C HOTEL NAHA</h2>
+    <div class="info-box info">無人飯店（自助 check-in），含<strong>免費租車</strong>方案！</div>
+    <div class="table-scroll">
+    <table>
+      <tr><th>項目</th><th>內容</th></tr>
+      <tr><td>住宿日期</td><td>4/25-4/29（4 晚）</td></tr>
+      <tr><td>費用</td><td>NT$10,609（4 晚含稅）</td></tr>
+      <tr><td>Check-in</td><td>17:00</td></tr>
+      <tr><td>Check-out</td><td style="color:var(--success);font-weight:700">13:00（晚退房！）</td></tr>
+      <tr><td>飯店類型</td><td>無人飯店（自助式）</td></tr>
+      <tr><td>聯絡信箱</td><td>reservation@hosty.jp</td></tr>
+    </table>
+    </div>
+
+    <h3>免費租車方案</h3>
+    <div class="table-scroll">
+    <table>
+      <tr><th>項目</th><th>內容</th></tr>
+      <tr><td>租車費用</td><td style="color:var(--success);font-weight:700">免費（飯店附贈）</td></tr>
+      <tr><td>保險</td><td>&yen;550 / 24 小時</td></tr>
+      <tr><td>使用天數</td><td>4/25 取車 ~ 4/29 還車</td></tr>
+      <tr><td>駕照需求</td><td>國際駕照 或 台灣駕照日文譯本</td></tr>
+    </table>
+    </div>
+    <div class="info-box tip">省去另外租車的費用，4 天保險約 &yen;2,200（~NT$500），超划算！</div>
+  </div>
+
+  <div class="card">
+    <h2>&#x1F697; 交通方式</h2>
+
+    <h3>去程：郵輪</h3>
+    <div class="table-scroll">
+    <table>
+      <tr><td>出發</td><td>4/24（五）14:00 基隆港</td></tr>
+      <tr><td>抵達</td><td>4/25（六）13:00 那霸若狹埠頭</td></tr>
+      <tr><td>費用</td><td>船票 NT$3,507.5 + 小費 NT$1,220</td></tr>
+      <tr><td>通關</td><td>約 30-60 分鐘</td></tr>
+    </table>
+    </div>
+
+    <h3>回程：飛機</h3>
+    <div class="table-scroll">
+    <table>
+      <tr><td>日期</td><td>4/29（三）</td></tr>
+      <tr><td>費用</td><td>~NT$10,000（全家）</td></tr>
+      <tr><td>推薦航空</td><td>虎航（手提 10kg/人）或樂桃</td></tr>
+    </table>
+    </div>
+    <div class="info-box warn">4/29 接近黃金週，越晚訂越貴，盡快購票！</div>
+
+    <h3>島內交通</h3>
+    <div class="table-scroll">
+    <table>
+      <tr><th>方式</th><th>使用日期</th><th>備註</th></tr>
+      <tr><td style="color:var(--primary);font-weight:700">免費租車</td><td>Day 1 ~ Day 5</td><td>飯店附贈，保險 &yen;550/24hr</td></tr>
+      <tr><td>步行</td><td>國際通、壺屋</td><td>市區景點步行可達</td></tr>
+    </table>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Day 1 ===== -->
+<div class="tab-panel" id="day1">
+  <div class="day-header">
+    <span class="day-icon">&#x1F6A2;</span>
+    <div>
+      <div class="day-label">Day 0-1 — 4/24-25（五-六）</div>
+      <div class="day-theme">郵輪出發 &#x2192; 抵達沖繩 &#x2192; 取車入住</div>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="info-box info"><strong>Day 0（4/24 五）</strong>：14:00 基隆港出發，郵輪船上過夜。</div>
+    <h3 style="margin-top:1rem;margin-bottom:0.8rem;">Day 1（4/25 六）行程</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">13:00</div>
+        <div class="timeline-desc">郵輪抵達那霸若狹埠頭</div>
+        <div class="timeline-note">通關約 30-60 分鐘</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">14:00</div>
+        <div class="timeline-desc">取車（飯店免費租車）</div>
+        <div class="timeline-note">需備：國際駕照或台灣駕照日文譯本</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">15:00</div>
+        <div class="timeline-desc">超市採購</div>
+        <div class="timeline-note">San-A 或 Union 超市，買早餐食材、飲料、零食、尿布等</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">17:00</div>
+        <div class="timeline-desc">B/C HOTEL NAHA Check-in</div>
+        <div class="timeline-note">無人飯店自助入住，放行李、稍作休息</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">18:00</div>
+        <div class="timeline-desc">牧志第一公設市場晚餐</div>
+        <div class="timeline-note">1 樓買海鮮 &#x2192; 2 樓代客料理，預算 &yen;3,000-5,000/全家</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">19:30</div>
+        <div class="timeline-desc">國際通散步</div>
+        <div class="timeline-note">御菓子御殿（紅芋塔試吃）、BLUE SEAL 冰淇淋</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">20:30</div>
+        <div class="timeline-desc">回飯店休息</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Day 2 ===== -->
+<div class="tab-panel" id="day2">
+  <div class="day-header" style="background:linear-gradient(135deg,#059669,#047857)">
+    <span class="day-icon">&#x1F3AA;</span>
+    <div>
+      <div class="day-label">Day 2 — 4/26（日）</div>
+      <div class="day-theme">兒童王國（動物園+玩水+博物館）&#x2192; 殘波岬 &#x2192; 御菓子御殿</div>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="info-box tip">&#x1F4A1; 週日去兒童王國而非水族館，避開週末人潮！</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">8:00</div>
+        <div class="timeline-desc">飯店內簡易早餐</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">9:00</div>
+        <div class="timeline-desc">出發前往沖繩兒童王國</div>
+        <div class="timeline-note">車程約 30 分鐘</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">9:30-12:00</div>
+        <div class="timeline-desc">沖繩兒童王國 Zoo &amp; Museum</div>
+        <div class="timeline-note">大人 &yen;500 / 6歲 &yen;100 / 2歲免費｜150 種動物</div>
+      </div>
+      <div class="timeline-item" style="border-left-color:var(--accent)">
+        <div class="timeline-time" style="color:var(--accent)">&#x1F4A6; Splash Park 玩水</div>
+        <div class="timeline-desc">水深 20cm，2 歲安全！帶換洗衣物</div>
+        <div class="timeline-note">4 月已開放，幼童玩水首選</div>
+      </div>
+      <div class="timeline-item" style="border-left-color:#8b5cf6">
+        <div class="timeline-time" style="color:#8b5cf6">&#x1F52C; Wonder Museum</div>
+        <div class="timeline-desc">兒童科學互動館</div>
+        <div class="timeline-note">園區內，可一起參觀</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">12:00</div>
+        <div class="timeline-desc">園內或附近午餐</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">13:30-15:30</div>
+        <div class="timeline-desc">殘波岬公園</div>
+        <div class="timeline-note">壯觀斷崖海岸線、燈塔、大型兒童遊具（免費）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">16:00</div>
+        <div class="timeline-desc">御菓子御殿（讀谷本店）</div>
+        <div class="timeline-note">紅芋塔工廠直營店，可參觀製作過程+免費試吃</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">17:30</div>
+        <div class="timeline-desc">開車回那霸</div>
+        <div class="timeline-note">車程約 40 分鐘</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">18:30</div>
+        <div class="timeline-desc">那霸市區晚餐</div>
+        <div class="timeline-note">通堂拉麵 或 花笠食堂</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Day 3 ===== -->
+<div class="tab-panel" id="day3">
+  <div class="day-header" style="background:linear-gradient(135deg,#0284c7,#0369a1)">
+    <span class="day-icon">&#x1F42C;</span>
+    <div>
+      <div class="day-label">Day 3 — 4/27（一）</div>
+      <div class="day-theme">美麗海水族館 &#x2192; 古宇利島 &#x2192; 美國村 &#x2192; Blue Seal</div>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="info-box tip">&#x1F4A1; 週一造訪水族館，人潮比週末少很多！</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">7:30</div>
+        <div class="timeline-desc">早起出發北上</div>
+        <div class="timeline-note">沖繩自動車道，車程約 1.5-2 小時</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">9:30-12:30</div>
+        <div class="timeline-desc">海洋博公園 + 美麗海水族館</div>
+        <div class="timeline-note">大人 &yen;2,180 / 6歲 &yen;610 / 2歲免費｜停車免費</div>
+      </div>
+
+      <div class="spot-card" style="margin:1rem 0;border-left:4px solid var(--primary)">
+        <div class="spot-header">
+          <span class="spot-name">&#x1F42C; Plan B 必看節目</span>
+        </div>
+        <div class="table-scroll">
+        <table>
+          <tr><th>時間</th><th>節目</th><th>地點</th></tr>
+          <tr><td style="font-weight:700">10:30</td><td>海豚秀 Okichan Theater</td><td>海豚劇場（免費）</td></tr>
+          <tr><td style="font-weight:700">15:00</td><td>鯨鯊餵食解說</td><td>黑潮之海水槽前</td></tr>
+        </table>
+        </div>
+        <div class="info-box tip" style="margin-bottom:0">建議先看 10:30 海豚秀，再逛水族館，中間可安排午餐。</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">12:30</div>
+        <div class="timeline-desc">午餐</div>
+        <div class="timeline-note">園內餐廳或便利商店簡餐</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">14:00-15:30</div>
+        <div class="timeline-desc">古宇利島</div>
+        <div class="timeline-note">心形岩、跨海大橋、白沙灘踏浪（海水約 22&deg;C，踏浪就好）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">17:00-18:30</div>
+        <div class="timeline-desc">美國村 American Village</div>
+        <div class="timeline-note">逛街、看夕陽、沙灘玩沙</div>
+      </div>
+      <div class="timeline-item" style="border-left-color:var(--accent)">
+        <div class="timeline-time" style="color:var(--accent)">&#x1F366; Blue Seal 冰淇淋</div>
+        <div class="timeline-desc">美國村內 Blue Seal 本店</div>
+        <div class="timeline-note">沖繩限定口味，小孩最愛！</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">18:30</div>
+        <div class="timeline-desc">美國村晚餐</div>
+        <div class="timeline-note">迴轉壽司 / 漢堡排 / 塔可飯</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">19:30</div>
+        <div class="timeline-desc">開車回那霸</div>
+        <div class="timeline-note">車程約 30-40 分鐘</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Day 4 ===== -->
+<div class="tab-panel" id="day4">
+  <div class="day-header" style="background:linear-gradient(135deg,#7c3aed,#6d28d9)">
+    <span class="day-icon">&#x1F3DD;</span>
+    <div>
+      <div class="day-label">Day 4 — 4/28（二）</div>
+      <div class="day-theme">瀨長島 &#x2192; 奧武島 &#x2192; 平和祈念公園 &#x2192; 首里城 &#x2192; 國際通</div>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="info-box info">今日行程跨越南部與市區，全程開車最方便。最後一天開車，明天還車。</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">8:30</div>
+        <div class="timeline-desc">出發前往瀨長島</div>
+        <div class="timeline-note">車程約 20 分鐘</div>
+      </div>
+      <div class="timeline-item" style="border-left-color:var(--accent)">
+        <div class="timeline-time" style="color:var(--accent)">9:00-10:30 &#x2600; 瀨長島 Umikaji Terrace</div>
+        <div class="timeline-desc">白色地中海風格商業設施，面海咖啡廳</div>
+        <div class="timeline-note">拍照打卡聖地、早餐/brunch、看飛機起降</div>
+      </div>
+      <div class="timeline-item" style="border-left-color:#10b981">
+        <div class="timeline-time" style="color:#10b981">11:00-12:00 &#x1F41F; 奧武島</div>
+        <div class="timeline-desc">天婦羅之島！中本鮮魚天婦羅</div>
+        <div class="timeline-note">每個只要 &yen;65-100，在地人氣小吃。沿岸散步看貓</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">12:30-14:00</div>
+        <div class="timeline-desc">平和祈念公園</div>
+        <div class="timeline-note">歷史教育意義 + 大型兒童遊具 + 海景草地（免費）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">15:00-16:30</div>
+        <div class="timeline-desc">首里城公園（世界遺產）</div>
+        <div class="timeline-note">庭園免費參觀，琉球王國歷史。可開車直達停車場</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">17:00-17:30</div>
+        <div class="timeline-desc">壺屋陶器街散步</div>
+        <div class="timeline-note">沖繩傳統陶器老街，特色小店</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">17:30-19:00</div>
+        <div class="timeline-desc">國際通逛街+買伴手禮</div>
+        <div class="timeline-note">紅芋塔、黑糖、雪鹽、沖繩限定零食</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">19:00</div>
+        <div class="timeline-desc">國際通或牧志市場晚餐</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">20:30</div>
+        <div class="timeline-desc">回飯店，整理行李打包</div>
+        <div class="timeline-note" style="color:var(--danger);font-weight:600">伴手禮要算手提行李重量！</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Day 5 ===== -->
+<div class="tab-panel" id="day5">
+  <div class="day-header" style="background:linear-gradient(135deg,#dc2626,#b91c1c)">
+    <span class="day-icon">&#x2708;</span>
+    <div>
+      <div class="day-label">Day 5 — 4/29（三）</div>
+      <div class="day-theme">漁市場早餐 &#x2192; 退房 &#x2192; 還車 &#x2192; 回家</div>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="info-box warn">4/29 是日本「昭和之日」假日，機場可能較擁擠，建議提早出發。</div>
+    <div class="info-box tip">B/C HOTEL 可以住到 <strong>13:00</strong> 才退房，不用急！</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">7:00</div>
+        <div class="timeline-desc">泊港漁市場早餐</div>
+        <div class="timeline-note">6:00 開門，新鮮海鮮丼、握壽司，最後一餐吃好的！</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">8:30</div>
+        <div class="timeline-desc">回飯店整理行李</div>
+        <div class="timeline-note">確認手提行李重量（每人 7-10kg）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">12:00</div>
+        <div class="timeline-desc">Check-out（13:00 前）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">12:30</div>
+        <div class="timeline-desc">還車</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">13:00</div>
+        <div class="timeline-desc">前往那霸機場</div>
+        <div class="timeline-note">視還車地點，可能需搭計程車</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">14:00</div>
+        <div class="timeline-desc">抵達機場辦理報到</div>
+        <div class="timeline-note">推車在登機門託運（免費）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">下午</div>
+        <div class="timeline-desc">搭機返回台灣</div>
+        <div class="timeline-note">飛行約 1.5 小時，抵達桃園（扣 1 小時時差）</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 預算 ===== -->
+<div class="tab-panel" id="budget">
+  <div class="card">
+    <h2>&#x1F4B0; 費用總整理（全家 4 人）</h2>
+
+    <h3>大項費用</h3>
+    <div class="table-scroll">
+    <table>
+      <tr><th>項目</th><th>金額（NT$）</th><th>備註</th></tr>
+      <tr><td>&#x1F6A2; 郵輪船票</td><td>NT$3,507.5</td><td>基隆→那霸</td></tr>
+      <tr><td>&#x1F6A2; 郵輪小費</td><td>NT$1,220</td><td></td></tr>
+      <tr><td>&#x1F3E8; 住宿 4 晚</td><td>NT$10,609</td><td>B/C HOTEL NAHA（含免費租車）</td></tr>
+      <tr><td>&#x2708; 回程機票</td><td>~NT$10,000</td><td>那霸→桃園（全家）</td></tr>
+      <tr style="font-weight:700;background:var(--primary-light)"><td>固定費用小計</td><td>~NT$25,337</td><td></td></tr>
+    </table>
+    </div>
+
+    <h3>交通費用</h3>
+    <div class="table-scroll">
+    <table>
+      <tr><th>項目</th><th>日幣</th><th>台幣</th></tr>
+      <tr><td>租車保險（4天 &times; &yen;550）</td><td>&yen;2,200</td><td>~NT$500</td></tr>
+      <tr><td>高速公路 ETC</td><td>&yen;1,000-2,000</td><td>~NT$250-450</td></tr>
+      <tr><td>停車場</td><td>&yen;500-1,000</td><td>~NT$120-230</td></tr>
+      <tr><td>加油</td><td>&yen;3,000-4,000</td><td>~NT$680-910</td></tr>
+      <tr style="font-weight:700"><td>交通小計</td><td>&yen;6,700-9,200</td><td>~NT$1,550-2,090</td></tr>
+    </table>
+    </div>
+
+    <h3>門票費用</h3>
+    <div class="table-scroll">
+    <table>
+      <tr><th>項目</th><th>日幣</th><th>備註</th></tr>
+      <tr><td>美麗海水族館</td><td>&yen;4,970</td><td>2大+6歲，2歲免費</td></tr>
+      <tr><td>兒童王國</td><td>&yen;1,100</td><td>2大+6歲，2歲免費</td></tr>
+      <tr><td>殘波岬・平和祈念公園等</td><td>&yen;0</td><td>免費</td></tr>
+      <tr style="font-weight:700"><td>門票小計</td><td>&yen;6,070</td><td>~NT$1,380</td></tr>
+    </table>
+    </div>
+
+    <h3>每日餐飲</h3>
+    <div class="table-scroll">
+    <table>
+      <tr><th>日期</th><th>早餐</th><th>午餐</th><th>晚餐</th><th>小計</th></tr>
+      <tr><td>Day 1</td><td>船上</td><td>船上</td><td>&yen;4,000</td><td>&yen;4,000</td></tr>
+      <tr><td>Day 2</td><td>&yen;500</td><td>&yen;2,000</td><td>&yen;3,500</td><td>&yen;6,000</td></tr>
+      <tr><td>Day 3</td><td>&yen;500</td><td>&yen;2,000</td><td>&yen;3,500</td><td>&yen;6,000</td></tr>
+      <tr><td>Day 4</td><td>&yen;500</td><td>&yen;1,500</td><td>&yen;3,500</td><td>&yen;5,500</td></tr>
+      <tr><td>Day 5</td><td>&yen;3,000</td><td>-</td><td>-</td><td>&yen;3,000</td></tr>
+      <tr style="font-weight:700"><td colspan="4">餐飲小計</td><td>&yen;24,500 (~NT$5,570)</td></tr>
+    </table>
+    </div>
+
+    <h3>其他費用</h3>
+    <div class="table-scroll">
+    <table>
+      <tr><th>項目</th><th>預估</th></tr>
+      <tr><td>伴手禮</td><td>~NT$2,000-3,000</td></tr>
+      <tr><td>零食飲料冰淇淋</td><td>~NT$500-1,000</td></tr>
+      <tr><td>緊急預備金</td><td>~NT$1,000</td></tr>
+      <tr style="font-weight:700"><td>其他小計</td><td>~NT$3,500-5,000</td></tr>
+    </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>&#x1F4CA; 總預算</h2>
+    <div class="budget-item">
+      <span class="budget-label">郵輪</span>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:12%;background:linear-gradient(90deg,#6366f1,#818cf8)">NT$4,728</div></div>
+    </div>
+    <div class="budget-item">
+      <span class="budget-label">住宿</span>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:27%;background:linear-gradient(90deg,#0891b2,#0ea5e9)">NT$10,609</div></div>
+    </div>
+    <div class="budget-item">
+      <span class="budget-label">機票</span>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:26%;background:linear-gradient(90deg,#8b5cf6,#a78bfa)">~NT$10,000</div></div>
+    </div>
+    <div class="budget-item">
+      <span class="budget-label">交通+門票</span>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:8%;background:linear-gradient(90deg,#10b981,#34d399)">~NT$3,000</div></div>
+    </div>
+    <div class="budget-item">
+      <span class="budget-label">餐飲</span>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:15%;background:linear-gradient(90deg,#f59e0b,#fbbf24)">~NT$5,570</div></div>
+    </div>
+    <div class="budget-item">
+      <span class="budget-label">其他</span>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:12%;background:linear-gradient(90deg,#ec4899,#f472b6)">~NT$4,000</div></div>
+    </div>
+    <p style="text-align:right;font-size:1.2rem;font-weight:800;margin-top:1rem;color:var(--primary-dark)">
+      總計：約 NT$38,000 - 40,000
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>&#x1F4B3; 信用卡策略</h2>
+    <div class="cc-grid">
+      <div class="cc-card">
+        <div class="cc-name">凱基幣享卡</div>
+        <div class="cc-rate">淨 2%</div>
+        <div class="cc-use">Booking.com 訂房</div>
+      </div>
+      <div class="cc-card">
+        <div class="cc-name">樂天 JCB</div>
+        <div class="cc-rate">淨 2.5%</div>
+        <div class="cc-use">日本實體消費</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 實用資訊 ===== -->
+<div class="tab-panel" id="info">
+  <div class="card">
+    <h2>&#x1F321; 天氣（4/25-4/29）</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><th>項目</th><th>數值</th></tr>
+      <tr><td>白天</td><td>25-27&deg;C</td></tr>
+      <tr><td>夜間</td><td>19-21&deg;C</td></tr>
+      <tr><td>海水</td><td>21-23&deg;C（偏涼）</td></tr>
+      <tr><td>降雨</td><td>中等，偶陣雨</td></tr>
+      <tr><td>紫外線</td><td>強（需防曬）</td></tr>
+    </table>
+    </div>
+    <h3>穿著建議</h3>
+    <ul class="check-list">
+      <li>白天：短袖/薄長袖 + 防曬外套</li>
+      <li>室內：薄外套（日本冷氣強）</li>
+      <li>夜間：薄長袖 + 薄外套</li>
+      <li>必備：防曬乳 SPF50+、遮陽帽、太陽眼鏡</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>&#x26A0; 黃金週注意</h2>
+    <div class="info-box warn">
+      2026 黃金週：4/29-5/10。你的行程 4/25-4/28 人潮尚可，但 <strong>4/29（昭和之日）是假日</strong>，機場會較擁擠。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>&#x1F4A6; 玩水資訊</h2>
+    <div class="info-box info">4 月下旬大部分海灘已開放，但海水約 21-23&deg;C（偏涼）。</div>
+    <div class="info-box warn">2 歲不建議下海游泳，海邊踏浪 OK。</div>
+    <div class="info-box tip">推薦玩水：兒童王國 Splash Park（水深 20cm、水溫暖、安全）</div>
+  </div>
+
+  <div class="card">
+    <h2>&#x1F392; 必備物品清單</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><th>類別</th><th>物品</th></tr>
+      <tr><td>證件</td><td>護照、台灣駕照 + 日文譯本、信用卡</td></tr>
+      <tr><td>嬰幼兒</td><td>推車、尿布（可當地買）、奶瓶、安撫物品</td></tr>
+      <tr><td>防曬</td><td>防曬乳 SPF50+、遮陽帽、太陽眼鏡、薄外套</td></tr>
+      <tr><td>玩水</td><td>換洗衣物 &times; 2套、小毛巾、防水袋</td></tr>
+      <tr><td>其他</td><td>雨傘/雨衣、行動電源、日幣現金</td></tr>
+    </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>&#x1F4B4; 日幣準備</h2>
+    <ul class="check-list">
+      <li>建議攜帶現金：&yen;50,000-80,000</li>
+      <li>很多小店只收現金（如奧武島天婦羅）</li>
+      <li>超市和大型商場可刷卡</li>
+      <li>便利商店 ATM 可用海外提款卡</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>&#x1F4F1; 重要聯絡</h2>
+    <div class="phone-grid">
+      <div class="phone-card">
+        <div class="phone-label">飯店聯絡</div>
+        <div class="phone-number">reservation@hosty.jp</div>
+      </div>
+      <div class="phone-card">
+        <div class="phone-label">日本緊急電話</div>
+        <div class="phone-number">110 / 119</div>
+      </div>
+      <div class="phone-card">
+        <div class="phone-label">台灣駐那霸辦事處</div>
+        <div class="phone-number">098-862-7008</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>&#x1F4F6; 網路方案</h2>
+    <ul class="check-list">
+      <li>建議購買日本 eSIM 或租借 Wi-Fi 機</li>
+      <li>沖繩便利商店也有販售短期 SIM 卡</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>&#x1F6CD; 必吃美食清單</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><th>美食</th><th>哪裡吃</th><th>預算</th></tr>
+      <tr><td>海鮮代客料理</td><td>牧志市場（Day 1）</td><td>&yen;3,000-5,000/全家</td></tr>
+      <tr><td>天婦羅</td><td>奧武島中本鮮魚（Day 4）</td><td>&yen;65-100/個</td></tr>
+      <tr><td>海鮮丼</td><td>泊港漁市場（Day 5）</td><td>&yen;800-1,500/人</td></tr>
+      <tr><td>塔可飯</td><td>美國村（Day 3）</td><td>&yen;800-1,000</td></tr>
+      <tr><td>Blue Seal 冰淇淋</td><td>美國村（Day 3）</td><td>&yen;350-500</td></tr>
+      <tr><td>紅芋塔</td><td>御菓子御殿（Day 2）</td><td>伴手禮</td></tr>
+      <tr><td>雪鹽冰淇淋</td><td>鹽屋（國際通）</td><td>&yen;350-500</td></tr>
+      <tr><td>沖繩麵</td><td>國際通各店</td><td>&yen;700-1,000</td></tr>
+    </table>
+    </div>
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<div class="footer">
+  沖繩親子旅行攻略 2026 &#x2022; 2大2小 &#x2022; 4/24-4/29 | 最後更新：2026/03/20
+</div>
+
+<script>
+  // Tab switching
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // Swipe support for mobile
+  let startX = 0;
+  const tabs = ['overview','stay','day1','day2','day3','day4','day5','budget','info'];
+  document.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+  document.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) < 60) return;
+    const current = tabs.findIndex(t => document.getElementById(t).classList.contains('active'));
+    const next = diff > 0 ? Math.min(current + 1, tabs.length - 1) : Math.max(current - 1, 0);
+    if (next !== current) {
+      document.querySelectorAll('.tab-btn')[next].click();
+      document.querySelectorAll('.tab-btn')[next].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+  });
+</script>
+</body>
+</html>
